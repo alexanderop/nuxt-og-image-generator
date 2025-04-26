@@ -5,19 +5,27 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxi generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "npm run generate && touch .output/public/.nojekyll && gh-pages -d .output/public"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.3.0",
     "@nuxt/icon": "^1.12.0",
     "@nuxt/image": "^1.10.0",
     "@nuxt/ui": "^3.1.0",
+    "@resvg/resvg-wasm": "^2.6.2",
     "eslint": "^9.25.1",
+    "file-saver": "^2.0.5",
     "nuxt": "^3.16.2",
+    "satori": "^0.12.2",
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "yoga-wasm-web": "^0.3.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
